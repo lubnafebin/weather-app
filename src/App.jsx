@@ -1,10 +1,14 @@
+import { CiSearch } from "react-icons/ci";
+
 function App() {
   return (
     <>
       <div className="container">
         <form action="">
           <input type="text" placeholder="Search" />
-          <button></button>
+          <button>
+            <CiSearch />
+          </button>
         </form>
       </div>
     </>
