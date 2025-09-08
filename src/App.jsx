@@ -4,15 +4,14 @@ function App() {
   return (
     <>
       <div className="container">
-        <form action="">
+        <div className="search-bar">
           <input type="text" placeholder="Search" />
           <button>
             <CiSearch />
           </button>
-        </form>
+        </div>
       </div>
     </>
   );
 }
-
 export default App;
