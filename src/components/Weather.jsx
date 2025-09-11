@@ -1,5 +1,5 @@
 import { CiSearch } from "react-icons/ci";
-import { FaSun, FaWind } from "react-icons/fa";
+import { FaWind } from "react-icons/fa";
 import { WiHumidity } from "react-icons/wi";
 import "./weather.css";
 import { useEffect, useRef, useState } from "react";
@@ -12,7 +12,7 @@ export const Weather = () => {
   const search = async (city) => {
     if (city === "") {
       alert("Enter a city");
-      return
+      return;
     }
     try {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
@@ -23,7 +23,6 @@ export const Weather = () => {
       }
 
       const data = await response.json();
-      console.log(data);
 
       setWeatherData({
         humidity: data.main.humidity,
@@ -33,7 +32,7 @@ export const Weather = () => {
         icon: data.weather[0].icon,
       });
     } catch (error) {
-      setWeatherData(false)
+      setWeatherData(false);
       console.log(error);
     }
   };
